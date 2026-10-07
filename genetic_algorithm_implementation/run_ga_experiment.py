@@ -409,9 +409,10 @@ def main():
         json.dump(ga_engine.history, f, indent=2)
     print(f"  GA training history saved to: {history_file}")
 
-    # 4. Evaluate ALL Policies on the full 20,000 trace
-    print(f"\n[4/5] Evaluating all policies on full 20,000 request trace...")
-    evaluation_trace = records
+    # 4. Evaluate ALL Policies on UNSEEN test set only (no data leakage)
+    test_trace = records[train_size:]
+    print(f"\n[4/5] Evaluating all policies on {len(test_trace)} UNSEEN test requests (excluding {train_size} training requests)...")
+    evaluation_trace = test_trace
 
     policies_to_evaluate = {
         "GA-Predictive": GAPredictivePolicy(best_chromosome),

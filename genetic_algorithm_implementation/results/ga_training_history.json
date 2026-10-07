@@ -10,7 +10,7 @@
     "best_chr_lpc": 0.4049008168028005,
     "best_penalty": 68300,
     "best_avg_retrieval": 0.06050224217888522,
-    "time_sec": 2.760467767715454,
+    "time_sec": 2.648463487625122,
     "best_genes": {
       "w_recency": 0.6142565465487604,
       "w_frequency": 0.3430184128687694,
@@ -35,7 +35,7 @@
     "best_chr_lpc": 0.4054842473745624,
     "best_penalty": 68125,
     "best_avg_retrieval": 0.06043357625183023,
-    "time_sec": 2.8784749507904053,
+    "time_sec": 2.9461190700531006,
     "best_genes": {
       "w_recency": 0.5478194149316628,
       "w_frequency": 0.44510894440121584,
@@ -60,7 +60,7 @@
     "best_chr_lpc": 0.40694282380396735,
     "best_penalty": 68060,
     "best_avg_retrieval": 0.06036345823072024,
-    "time_sec": 3.1685845851898193,
+    "time_sec": 3.071310043334961,
     "best_genes": {
       "w_recency": 0.5478194149316628,
       "w_frequency": 0.44510894440121584,
@@ -85,7 +85,7 @@
     "best_chr_lpc": 0.40694282380396735,
     "best_penalty": 68060,
     "best_avg_retrieval": 0.06036345823072024,
-    "time_sec": 3.563674211502075,
+    "time_sec": 3.36670184135437,
     "best_genes": {
       "w_recency": 0.5478194149316628,
       "w_frequency": 0.44510894440121584,
@@ -110,7 +110,7 @@
     "best_chr_lpc": 0.40781796966161027,
     "best_penalty": 68035,
     "best_avg_retrieval": 0.060295266101770245,
-    "time_sec": 3.5950927734375,
+    "time_sec": 3.5621747970581055,
     "best_genes": {
       "w_recency": 0.5478194149316628,
       "w_frequency": 0.5112242181968282,
@@ -135,7 +135,7 @@
     "best_chr_lpc": 0.40781796966161027,
     "best_penalty": 68035,
     "best_avg_retrieval": 0.060295266101770245,
-    "time_sec": 3.6939585208892822,
+    "time_sec": 3.6643004417419434,
     "best_genes": {
       "w_recency": 0.5478194149316628,
       "w_frequency": 0.5112242181968282,
@@ -160,7 +160,7 @@
     "best_chr_lpc": 0.40956826137689617,
     "best_penalty": 67850,
     "best_avg_retrieval": 0.06010715569676528,
-    "time_sec": 3.9049232006073,
+    "time_sec": 3.773264169692993,
     "best_genes": {
       "w_recency": 0.5456781124287036,
       "w_frequency": 0.45163050700980173,
@@ -185,7 +185,7 @@
     "best_chr_lpc": 0.40956826137689617,
     "best_penalty": 67715,
     "best_avg_retrieval": 0.06008065989596031,
-    "time_sec": 4.332309722900391,
+    "time_sec": 4.11064076423645,
     "best_genes": {
       "w_recency": 0.5478194149316628,
       "w_frequency": 0.44510894440121584,
@@ -210,7 +210,7 @@
     "best_chr_lpc": 0.40956826137689617,
     "best_penalty": 67715,
     "best_avg_retrieval": 0.06008065989596031,
-    "time_sec": 4.17107892036438,
+    "time_sec": 3.9415245056152344,
     "best_genes": {
       "w_recency": 0.5478194149316628,
       "w_frequency": 0.44510894440121584,
@@ -235,7 +235,7 @@
     "best_chr_lpc": 0.40956826137689617,
     "best_penalty": 67715,
     "best_avg_retrieval": 0.06008065989596031,
-    "time_sec": 3.577458620071411,
+    "time_sec": 3.3170156478881836,
     "best_genes": {
       "w_recency": 0.5478194149316628,
       "w_frequency": 0.44510894440121584,
@@ -260,7 +260,7 @@
     "best_chr_lpc": 0.40956826137689617,
     "best_penalty": 67715,
     "best_avg_retrieval": 0.06008065989596031,
-    "time_sec": 3.501694440841675,
+    "time_sec": 3.2865371704101562,
     "best_genes": {
       "w_recency": 0.5478194149316628,
       "w_frequency": 0.44510894440121584,
@@ -285,7 +285,7 @@
     "best_chr_lpc": 0.40956826137689617,
     "best_penalty": 67715,
     "best_avg_retrieval": 0.06008065989596031,
-    "time_sec": 4.04669976234436,
+    "time_sec": 3.652064323425293,
     "best_genes": {
       "w_recency": 0.5478194149316628,
       "w_frequency": 0.44510894440121584,
@@ -310,7 +310,7 @@
     "best_chr_lpc": 0.40956826137689617,
     "best_penalty": 67715,
     "best_avg_retrieval": 0.06008065989596031,
-    "time_sec": 4.56240439414978,
+    "time_sec": 4.173003435134888,
     "best_genes": {
       "w_recency": 0.5478194149316628,
       "w_frequency": 0.44510894440121584,
@@ -335,7 +335,7 @@
     "best_chr_lpc": 0.40956826137689617,
     "best_penalty": 67715,
     "best_avg_retrieval": 0.06008065989596031,
-    "time_sec": 4.323071479797363,
+    "time_sec": 3.926424503326416,
     "best_genes": {
       "w_recency": 0.5478194149316628,
       "w_frequency": 0.44510894440121584,
@@ -360,7 +360,7 @@
     "best_chr_lpc": 0.40956826137689617,
     "best_penalty": 67715,
     "best_avg_retrieval": 0.06008065989596031,
-    "time_sec": 4.2206034660339355,
+    "time_sec": 3.8559646606445312,
     "best_genes": {
       "w_recency": 0.5478194149316628,
       "w_frequency": 0.44510894440121584,
@@ -385,7 +385,7 @@
     "best_chr_lpc": 0.40956826137689617,
     "best_penalty": 67715,
     "best_avg_retrieval": 0.06008065989596031,
-    "time_sec": 4.017531871795654,
+    "time_sec": 3.9323067665100098,
     "best_genes": {
       "w_recency": 0.5478194149316628,
       "w_frequency": 0.44510894440121584,
@@ -410,7 +410,7 @@
     "best_chr_lpc": 0.40956826137689617,
     "best_penalty": 67715,
     "best_avg_retrieval": 0.06008065989596031,
-    "time_sec": 3.9417219161987305,
+    "time_sec": 3.9193460941314697,
     "best_genes": {
       "w_recency": 0.5478194149316628,
       "w_frequency": 0.44510894440121584,
@@ -435,7 +435,7 @@
     "best_chr_lpc": 0.40956826137689617,
     "best_penalty": 67715,
     "best_avg_retrieval": 0.06008065989596031,
-    "time_sec": 3.7644972801208496,
+    "time_sec": 3.835029363632202,
     "best_genes": {
       "w_recency": 0.5478194149316628,
       "w_frequency": 0.44510894440121584,
@@ -460,7 +460,7 @@
     "best_chr_lpc": 0.40956826137689617,
     "best_penalty": 67715,
     "best_avg_retrieval": 0.06008065989596031,
-    "time_sec": 4.094820499420166,
+    "time_sec": 4.045525074005127,
     "best_genes": {
       "w_recency": 0.5478194149316628,
       "w_frequency": 0.44510894440121584,
@@ -485,7 +485,7 @@
     "best_chr_lpc": 0.4089848308051342,
     "best_penalty": 67545,
     "best_avg_retrieval": 0.06005046288454043,
-    "time_sec": 3.8849270343780518,
+    "time_sec": 3.9416534900665283,
     "best_genes": {
       "w_recency": 0.5478194149316628,
       "w_frequency": 0.44510894440121584,
@@ -510,7 +510,7 @@
     "best_chr_lpc": 0.4089848308051342,
     "best_penalty": 67545,
     "best_avg_retrieval": 0.06005046288454043,
-    "time_sec": 3.9857189655303955,
+    "time_sec": 3.727229356765747,
     "best_genes": {
       "w_recency": 0.5478194149316628,
       "w_frequency": 0.44510894440121584,
@@ -535,7 +535,7 @@
     "best_chr_lpc": 0.4089848308051342,
     "best_penalty": 67545,
     "best_avg_retrieval": 0.06005046288454043,
-    "time_sec": 3.6161000728607178,
+    "time_sec": 3.363020420074463,
     "best_genes": {
       "w_recency": 0.5478194149316628,
       "w_frequency": 0.44510894440121584,
@@ -560,7 +560,7 @@
     "best_chr_lpc": 0.4089848308051342,
     "best_penalty": 67545,
     "best_avg_retrieval": 0.06005046288454043,
-    "time_sec": 3.823214054107666,
+    "time_sec": 3.543140172958374,
     "best_genes": {
       "w_recency": 0.5478194149316628,
       "w_frequency": 0.44510894440121584,
@@ -585,7 +585,7 @@
     "best_chr_lpc": 0.4089848308051342,
     "best_penalty": 67545,
     "best_avg_retrieval": 0.06005046288454043,
-    "time_sec": 3.5563364028930664,
+    "time_sec": 3.418367385864258,
     "best_genes": {
       "w_recency": 0.5478194149316628,
       "w_frequency": 0.44510894440121584,
@@ -610,7 +610,7 @@
     "best_chr_lpc": 0.4089848308051342,
     "best_penalty": 67545,
     "best_avg_retrieval": 0.06005046288454043,
-    "time_sec": 3.804579257965088,
+    "time_sec": 3.528825044631958,
     "best_genes": {
       "w_recency": 0.5478194149316628,
       "w_frequency": 0.44510894440121584,
