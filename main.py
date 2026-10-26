@@ -50,12 +50,15 @@ from dsoa_implementation.dsoa_dove import Dove
 from dsoa_implementation.dsoa_predictive_policy import DSOAPredictivePolicy
 from ho_implementation.ho_hippo import Hippo
 from ho_implementation.ho_predictive_policy import HOPredictivePolicy
+from abc_implementation.abc_bee import FoodSource
+from abc_implementation.abc_predictive_policy import ABCPredictivePolicy
 
 OUTPUT_DIR = os.path.join(PROJECT_ROOT, "results")
 FIGURE_DIR = os.path.join(OUTPUT_DIR, "figures")
 os.makedirs(FIGURE_DIR, exist_ok=True)
 
 POLICY_ORDER = [
+    "ABC-Predictive",
     "HO-Predictive",
     "DSOA-Predictive",
     "SFO-Predictive",
@@ -67,6 +70,7 @@ POLICY_ORDER = [
 ]
 
 POLICY_COLORS = {
+    "ABC-Predictive": "#FF8F00",
     "HO-Predictive": "#2E7D32",
     "DSOA-Predictive": "#D81B60",
     "SFO-Predictive": "#00897B",
@@ -76,6 +80,7 @@ POLICY_COLORS = {
     "LFU": "#6D4C41",
     "Random": "#757575"
 }
+
 
 
 
@@ -135,7 +140,16 @@ def load_best_weights():
     else:
         ho_weights = ga_weights
 
-    return ga_weights, pso_weights, sfo_weights, dsoa_weights, ho_weights
+    # 6. ABC
+    abc_path = os.path.join(PROJECT_ROOT, "abc_implementation", "results", "abc_best_weights.json")
+    if os.path.exists(abc_path):
+        with open(abc_path, "r") as f:
+            abc_weights = json.load(f)
+    else:
+        abc_weights = ga_weights
+
+    return ga_weights, pso_weights, sfo_weights, dsoa_weights, ho_weights, abc_weights
+
 
 
 
@@ -250,10 +264,10 @@ def main():
 
     train_size = 5000
     test_trace = records[train_size:]
-    print(f"\nEvaluating all 8 policies on {len(test_trace)} UNSEEN test requests...")
+    print(f"\nEvaluating all 9 policies on {len(test_trace)} UNSEEN test requests...")
 
     # Load weights
-    ga_w, pso_w, sfo_w, dsoa_w, ho_w = load_best_weights()
+    ga_w, pso_w, sfo_w, dsoa_w, ho_w, abc_w = load_best_weights()
 
     ga_chrom = Chromosome()
     ga_chrom.genes = list(ga_w.values())
@@ -262,8 +276,10 @@ def main():
     sfo_fish = Fish(position_seed=sfo_w)
     dsoa_dove = Dove(position_seed=dsoa_w)
     ho_hippo = Hippo(position_seed=ho_w)
+    abc_fs = FoodSource(position_seed=abc_w)
 
     policies = {
+        "ABC-Predictive": ABCPredictivePolicy(abc_fs),
         "HO-Predictive": HOPredictivePolicy(ho_hippo),
         "DSOA-Predictive": DSOAPredictivePolicy(dsoa_dove),
         "SFO-Predictive": SFOPredictivePolicy(sfo_fish),
@@ -273,6 +289,7 @@ def main():
         "LFU": MultiTierLFUPolicy(),
         "Random": MultiTierRandomPolicy(seed=42)
     }
+
 
 
     results = {}
