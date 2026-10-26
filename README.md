@@ -54,10 +54,13 @@ To run individual algorithms independently:
 # Newer Algorithms
 python3 -m dsoa_implementation.run_dsoa_experiment
 python3 -m sfo_implementation.run_sfo_experiment
+python3 -m ho_implementation.run_ho_experiment
 
 # Established Algorithms
 python3 -m genetic_algorithm_implementation.run_ga_experiment
 python3 -m pso_implementation.run_pso_experiment
+python3 -m abc_implementation.run_abc_experiment
+python3 -m woa_implementation.run_woa_experiment
 
 # Baseline Algorithms
 python3 -m lru_implementation.run_lru_experiment
@@ -71,10 +74,13 @@ python3 -m random_implementation.run_random_experiment
 
 | Category | Policy | Total CHR | HPC CHR | LPC CHR | Total SLA Penalty | Latency (ms) |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| **Newer** | **DSOA-Predictive (DSOA-EC)** | **41.41%** | **45.64%** | **39.49%** | **205,790** | **61.511** |
-| **Newer** | **SFO-Predictive (SFO)** | 41.41% | 45.47% | 39.58% | 206,350 | 61.430 |
-| **Established** | **GA-Predictive (GA)** | 40.63% | 46.04% | 38.17% | 206,320 | 62.216 |
-| **Established** | **PSO-Predictive (PSO)** | 38.04% | 47.22% | 33.88% | 207,565 | 64.601 |
+| **Newer** | **DSOA-Predictive (DSOA-EC)** | 41.43% | 45.77% | 39.46% | 205,505 | 61.391 |
+| **Newer** | **SFO-Predictive (SFO)** | **41.50%** | 45.40% | **39.73%** | 206,345 | **61.340** |
+| **Newer** | **HO-Predictive (HO)** | 41.13% | 45.85% | 39.00% | 206,270 | 61.765 |
+| **Established** | **WOA-Predictive (WOA)** | 41.01% | 45.12% | 39.14% | 207,335 | 61.856 |
+| **Established** | **GA-Predictive (GA)** | 40.48% | 46.02% | 37.97% | 206,555 | 62.430 |
+| **Established** | **PSO-Predictive (PSO)** | 38.04% | 47.18% | 33.90% | 207,765 | 64.500 |
+| **Established** | **ABC-Predictive (ABC)** | 33.90% | **47.43%** | 27.77% | 213,625 | 68.118 |
 | **Baseline** | **LRU (Least Recently Used)** | 37.95% | 38.92% | 37.50% | 226,145 | 65.119 |
 | **Baseline** | **Random Replacement (RR)** | 35.18% | 35.86% | 34.87% | 238,720 | 68.007 |
 | **Baseline** | **LFU (Least Frequently Used)** | 33.08% | 34.43% | 32.47% | 238,735 | 67.637 |
