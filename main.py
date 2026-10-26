@@ -48,12 +48,15 @@ from sfo_implementation.sfo_fish import Fish
 from sfo_implementation.sfo_predictive_policy import SFOPredictivePolicy
 from dsoa_implementation.dsoa_dove import Dove
 from dsoa_implementation.dsoa_predictive_policy import DSOAPredictivePolicy
+from ho_implementation.ho_hippo import Hippo
+from ho_implementation.ho_predictive_policy import HOPredictivePolicy
 
 OUTPUT_DIR = os.path.join(PROJECT_ROOT, "results")
 FIGURE_DIR = os.path.join(OUTPUT_DIR, "figures")
 os.makedirs(FIGURE_DIR, exist_ok=True)
 
 POLICY_ORDER = [
+    "HO-Predictive",
     "DSOA-Predictive",
     "SFO-Predictive",
     "PSO-Predictive",
@@ -64,6 +67,7 @@ POLICY_ORDER = [
 ]
 
 POLICY_COLORS = {
+    "HO-Predictive": "#2E7D32",
     "DSOA-Predictive": "#D81B60",
     "SFO-Predictive": "#00897B",
     "PSO-Predictive": "#0288D1",
@@ -72,6 +76,7 @@ POLICY_COLORS = {
     "LFU": "#6D4C41",
     "Random": "#757575"
 }
+
 
 
 def setup_plot_style():
@@ -122,7 +127,16 @@ def load_best_weights():
     else:
         dsoa_weights = ga_weights
 
-    return ga_weights, pso_weights, sfo_weights, dsoa_weights
+    # 5. HO
+    ho_path = os.path.join(PROJECT_ROOT, "ho_implementation", "results", "ho_best_weights.json")
+    if os.path.exists(ho_path):
+        with open(ho_path, "r") as f:
+            ho_weights = json.load(f)
+    else:
+        ho_weights = ga_weights
+
+    return ga_weights, pso_weights, sfo_weights, dsoa_weights, ho_weights
+
 
 
 def generate_bar_chart(policies, values, title, ylabel, filename):
@@ -236,10 +250,10 @@ def main():
 
     train_size = 5000
     test_trace = records[train_size:]
-    print(f"\nEvaluating all 7 policies on {len(test_trace)} UNSEEN test requests...")
+    print(f"\nEvaluating all 8 policies on {len(test_trace)} UNSEEN test requests...")
 
     # Load weights
-    ga_w, pso_w, sfo_w, dsoa_w = load_best_weights()
+    ga_w, pso_w, sfo_w, dsoa_w, ho_w = load_best_weights()
 
     ga_chrom = Chromosome()
     ga_chrom.genes = list(ga_w.values())
@@ -247,8 +261,10 @@ def main():
     pso_part = Particle(position_seed=pso_w)
     sfo_fish = Fish(position_seed=sfo_w)
     dsoa_dove = Dove(position_seed=dsoa_w)
+    ho_hippo = Hippo(position_seed=ho_w)
 
     policies = {
+        "HO-Predictive": HOPredictivePolicy(ho_hippo),
         "DSOA-Predictive": DSOAPredictivePolicy(dsoa_dove),
         "SFO-Predictive": SFOPredictivePolicy(sfo_fish),
         "PSO-Predictive": PSOPredictivePolicy(pso_part),
@@ -257,6 +273,7 @@ def main():
         "LFU": MultiTierLFUPolicy(),
         "Random": MultiTierRandomPolicy(seed=42)
     }
+
 
     results = {}
     for pol_name in POLICY_ORDER:
