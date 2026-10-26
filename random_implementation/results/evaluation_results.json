@@ -1,0 +1,29 @@
+{
+  "Random": {
+    "total_requests": 15000,
+    "nb_hpc": 4676,
+    "nb_lpc": 10324,
+    "chr_total": 0.3518,
+    "chr_dram": 0.14986666666666668,
+    "chr_ssd": 0.20193333333333333,
+    "chr_hpc": 0.3586398631308811,
+    "chr_hpc_dram": 0.1437125748502994,
+    "chr_hpc_ssd": 0.2149272882805817,
+    "chr_lpc": 0.3487020534676482,
+    "chr_lpc_dram": 0.15265401007361487,
+    "chr_lpc_ssd": 0.1960480433940333,
+    "penalty_hpc": 165650,
+    "penalty_lpc": 73070,
+    "penalty_total": 238720,
+    "avg_hpc_retrieval_time": 0.06648692904025803,
+    "avg_lpc_retrieval_time": 0.06869610143807996,
+    "avg_retrieval_time": 0.06800742876259894,
+    "reads_dram": 2248,
+    "reads_ssd": 3029,
+    "writes_dram": 11933,
+    "writes_ssd": 11757,
+    "used_size_dram": 43863,
+    "used_size_ssd": 176190,
+    "pit_aggregations": 38
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "LRU": {
+    "total_requests": 15000,
+    "nb_hpc": 4676,
+    "nb_lpc": 10324,
+    "chr_total": 0.3794666666666667,
+    "chr_dram": 0.2456,
+    "chr_ssd": 0.13386666666666666,
+    "chr_hpc": 0.38922155688622756,
+    "chr_hpc_dram": 0.2559880239520958,
+    "chr_hpc_ssd": 0.13323353293413173,
+    "chr_lpc": 0.3750484308407594,
+    "chr_lpc_dram": 0.24089500193723362,
+    "chr_lpc_ssd": 0.13415342890352577,
+    "penalty_hpc": 156040,
+    "penalty_lpc": 70105,
+    "penalty_total": 226145,
+    "avg_hpc_retrieval_time": 0.06351624318124911,
+    "avg_lpc_retrieval_time": 0.06584549644824277,
+    "avg_retrieval_time": 0.06511939056314528,
+    "reads_dram": 3684,
+    "reads_ssd": 2008,
+    "writes_dram": 12992,
+    "writes_ssd": 9714,
+    "used_size_dram": 44153,
+    "used_size_ssd": 175905,
+    "pit_aggregations": 0
+  }
+}

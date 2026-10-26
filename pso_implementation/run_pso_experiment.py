@@ -12,8 +12,7 @@ if PROJECT_ROOT not in sys.path:
 from genetic_algorithm_implementation.trace_preprocessor import TracePreprocessor
 from genetic_algorithm_implementation.cache_simulator import MultiTierCacheSimulator
 from genetic_algorithm_implementation.baseline_policies import (
-    QMARCPolicy, MARCPolicy, QLQMARCPolicy, 
-    PriorityLRUPolicy, LRUPolicy, LFUPolicy, RandPolicy
+    LRUPolicy, LFUPolicy, RandPolicy
 )
 from genetic_algorithm_implementation.ga_predictive_policy import GAPredictivePolicy
 from genetic_algorithm_implementation.ga_chromosome import Chromosome
@@ -107,9 +106,6 @@ def main():
     policies = {
         "PSO-Predictive": PSOPredictivePolicy(best_particle),
         "GA-Predictive": GAPredictivePolicy(ga_chromosome),
-        "QM_ARC": QMARCPolicy(alpha=0.2),
-        "M_ARC": MARCPolicy(),
-        "PriorityLRU": PriorityLRUPolicy(),
         "LRU": LRUPolicy(),
         "LFU": LFUPolicy(),
         "Random": RandPolicy()

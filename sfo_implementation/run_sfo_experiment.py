@@ -33,8 +33,7 @@ import numpy as np
 from genetic_algorithm_implementation.trace_preprocessor import TracePreprocessor
 from genetic_algorithm_implementation.cache_simulator import MultiTierCacheSimulator
 from genetic_algorithm_implementation.baseline_policies import (
-    LRUPolicy, LFUPolicy, RandPolicy, PriorityLRUPolicy,
-    MARCPolicy, QMARCPolicy, QLQMARCPolicy
+    LRUPolicy, LFUPolicy, RandPolicy
 )
 from genetic_algorithm_implementation.ga_predictive_policy import GAPredictivePolicy
 from genetic_algorithm_implementation.ga_chromosome import Chromosome
@@ -307,10 +306,6 @@ def main():
         "SFO-Predictive (Ours)": SFOPredictivePolicy(best_fish),
         "PSO-Predictive": PSOPredictivePolicy(best_particle),
         "GA-Predictive": GAPredictivePolicy(ga_chromosome),
-        "QM_ARC": QMARCPolicy(alpha=0.2),
-        "M_ARC": MARCPolicy(),
-        "QL_QM_ARC": QLQMARCPolicy(alpha=0.2),
-        "PriorityLRU": PriorityLRUPolicy(),
         "LRU": LRUPolicy(),
         "LFU": LFUPolicy(),
         "Random": RandPolicy()
@@ -383,10 +378,6 @@ def main():
         "SFO-Predictive (Ours)": "#00897B",   # Vibrant Teal
         "PSO-Predictive": "#0288D1",          # Light Blue
         "GA-Predictive": "#5E35B1",           # Deep Purple
-        "QM_ARC": "#1E88E5",                  # Blue
-        "M_ARC": "#3949AB",                   # Indigo
-        "QL_QM_ARC": "#8E24AA",               # Magenta
-        "PriorityLRU": "#FB8C00",             # Amber
         "LRU": "#E53935",                     # Red
         "LFU": "#6D4C41",                     # Brown
         "Random": "#757575"                   # Grey

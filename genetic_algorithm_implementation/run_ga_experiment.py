@@ -31,8 +31,7 @@ from genetic_algorithm_implementation.ga_engine import GeneticAlgorithmEngine
 from genetic_algorithm_implementation.ga_predictive_policy import GAPredictivePolicy
 from genetic_algorithm_implementation.cache_simulator import MultiTierCacheSimulator
 from genetic_algorithm_implementation.baseline_policies import (
-    LRUPolicy, LFUPolicy, RandPolicy, PriorityLRUPolicy,
-    MARCPolicy, QMARCPolicy, QLQMARCPolicy
+    LRUPolicy, LFUPolicy, RandPolicy
 )
 
 # Output directories inside genetic_algorithm_implementation only
@@ -70,10 +69,6 @@ def generate_plots(history: List[Dict[str, Any]], results: Dict[str, Any], best_
     # Color palette
     colors = {
         "GA-Predictive": "#00897B",  # Deep Teal
-        "QM_ARC": "#1E88E5",         # Strong Blue
-        "M_ARC": "#3949AB",          # Indigo
-        "QL_QM_ARC": "#8E24AA",      # Purple
-        "PriorityLRU": "#FB8C00",    # Amber / Orange
         "LRU": "#E53935",            # Red
         "LFU": "#6D4C41",            # Brown
         "Random": "#757575",         # Grey
@@ -416,10 +411,6 @@ def main():
 
     policies_to_evaluate = {
         "GA-Predictive": GAPredictivePolicy(best_chromosome),
-        "QM_ARC": QMARCPolicy(alpha=0.2),
-        "M_ARC": MARCPolicy(),
-        "QL_QM_ARC": QLQMARCPolicy(alpha=0.2),
-        "PriorityLRU": PriorityLRUPolicy(),
         "LRU": LRUPolicy(),
         "LFU": LFUPolicy(),
         "Random": RandPolicy()

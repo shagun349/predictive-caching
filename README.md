@@ -1,114 +1,120 @@
-# Predictive Caching — Base Paper Implementation
+# Predictive Multi-Tier Caching
 
-## Multi-Tier NDN Cache Simulator: Q-Learning Enhanced QoS-Aware ARC
+Benchmarking metaheuristic predictive caching algorithms against standard multi-tier replacement policies on real-world trace data (`Dataset/memcached-sample`).
 
-This project implements and compares **7 caching policies** from the research paper on multi-tier content store management for Named Data Networking (NDN):
+---
 
-### Policies Implemented
+## Supported Algorithms
 
-| Policy | Description | Key Feature |
-|--------|-------------|-------------|
-| **M_ARC** | Multi-tier ARC | Extends ARC across DRAM+SSD with proportional β-based p adaptation |
-| **QM_ARC** | Quality-aware M_ARC | Differentiates high/low priority content using α-based insertion |
-| **QL_QM_ARC** | Q-Learning QM_ARC | Learns optimal p adaptation via reinforcement learning |
-| **LRU** | Least Recently Used | Baseline recency-based eviction |
-| **LFU** | Least Frequently Used | Baseline frequency-based eviction |
-| **Random** | Random Eviction | Baseline random eviction |
-| **PriorityLRU** | Priority-aware LRU | High-priority content prefetching |
+Only the following 7 caching algorithms are supported and benchmarked:
 
-### Architecture
+1. **DSOA-Predictive**: Dove Swarm Optimization Algorithm with Exploration-Competition (DSOA-EC).
+2. **SFO-Predictive**: Sailfish Optimizer predictive multi-tier caching policy.
+3. **PSO-Predictive**: Particle Swarm Optimization predictive policy.
+4. **GA-Predictive**: Genetic Algorithm evolved predictive policy.
+5. **LRU**: Multi-tier Least Recently Used caching policy.
+6. **LFU**: Multi-tier Least Frequently Used caching policy.
+7. **Random**: Multi-tier Random Eviction policy.
 
-- **Discrete-event simulation** using SimPy
-- **Multi-tier storage**: DRAM (fast, small) + SSD (slower, large)
-- **NDN packet forwarding** with Pending Interest Table (PIT) and Content Store (CS)
-- **Realistic hardware parameters**: DRAM @ 40GB/s read, SSD @ 2GB/s read
+---
 
-## Project Structure
+## Directory Structure
 
 ```
-predictive-caching/
-├── main.py                          # Full simulation runner (all 7 policies)
-├── generate_trace.py                # Synthetic trace dataset generator
-├── results/                         # Simulation outputs
-│   ├── consolidated_results.json    # All metrics in one JSON
-│   ├── figures/                     # Publication-quality comparison plots
-│   │   ├── fig1_chr_total.png       # Total Cache Hit Ratio
-│   │   ├── fig2_chr_hpc.png         # High-Priority CHR
-│   │   ├── fig3_chr_lpc.png         # Low-Priority CHR
-│   │   ├── fig4_penalty.png         # Penalty Costs
-│   │   ├── fig5_retrieval_time.png  # Data Retrieval Time
-│   │   ├── fig6_ql_rewards.png      # Q-Learning Convergence
-│   │   ├── fig7_reads.png           # Read Operations
-│   │   ├── fig8_writes.png          # Write Operations
-│   │   └── summary_table.png        # Summary Table
-│   └── *.txt                        # Per-policy raw JSON results
-├── MultiTierCacheSimulator-main/    # Core simulator engine
-│   └── MultiTierCacheSimulator-main/
-│       ├── policies/                # All caching policy implementations
-│       │   ├── MARC/                # M_ARC (multi-tier ARC)
-│       │   ├── QM_ARC/              # QM_ARC (quality-aware)
-│       │   ├── QL_QM_ARC/           # QL_QM_ARC (Q-Learning)
-│       │   ├── lru_policy.py        # LRU
-│       │   ├── lfu_policy.py        # LFU
-│       │   └── random_policy.py     # Random
-│       ├── forwarder_structures/    # NDN forwarder, tiers, index, PIT
-│       ├── traces/                  # Trace generation and parsing
-│       ├── simulation.py            # SimPy simulation engine
-│       └── resources/               # Dataset storage
+├── Dataset/
+│   └── memcached-sample                   # Real-world Memcached trace (20,000 requests)
+├── dsoa_implementation/                   # Dove Swarm Optimization (DSOA-EC)
+│   ├── dsoa_dove.py                       # Dove agent model & satiety dynamics
+│   ├── dsoa_engine.py                     # DSOA foraging & competition engine
+│   ├── dsoa_predictive_policy.py          # Predictive utility policy
+│   ├── run_dsoa_experiment.py             # DSOA benchmark runner
+│   └── results/                           # Results & publication figures
+├── sfo_implementation/                    # Sailfish Optimizer (SFO)
+│   ├── sfo_fish.py                        # Sharpbelly fish & sailfish models
+│   ├── sfo_engine.py                      # SFO search engine
+│   ├── sfo_predictive_policy.py           # SFO predictive caching policy
+│   ├── run_sfo_experiment.py              # SFO benchmark runner
+│   └── results/                           # Results & publication figures
+├── pso_implementation/                    # Particle Swarm Optimization (PSO)
+│   ├── pso_particle.py                    # PSO particle model
+│   ├── pso_engine.py                      # PSO search engine
+│   ├── pso_predictive_policy.py           # PSO predictive policy
+│   ├── run_pso_experiment.py              # PSO benchmark runner
+│   └── results/                           # Results & publication figures
+├── genetic_algorithm_implementation/      # Genetic Algorithm (GA)
+│   ├── cache_simulator.py                 # Pure Python Multi-Tier Cache Simulator
+│   ├── trace_preprocessor.py              # QoS tagging & trace preprocessing
+│   ├── baseline_policies.py               # Baseline policy definitions (LRU, LFU, Rand)
+│   ├── ga_chromosome.py                   # Chromosome representation
+│   ├── ga_engine.py                       # GA evolution engine
+│   ├── ga_predictive_policy.py            # GA predictive caching policy
+│   ├── run_ga_experiment.py               # GA benchmark runner
+│   └── results/                           # Results & publication figures
+├── lru_implementation/                    # Dedicated LRU Implementation
+│   ├── lru_policy.py                      # Multi-tier LRU policy
+│   ├── run_lru_experiment.py              # LRU runner
+│   └── results/                           # Results & publication figures
+├── lfu_implementation/                    # Dedicated LFU Implementation
+│   ├── lfu_policy.py                      # Multi-tier LFU policy
+│   ├── run_lfu_experiment.py              # LFU runner
+│   └── results/                           # Results & publication figures
+├── random_implementation/                 # Dedicated Random Implementation
+│   ├── random_policy.py                   # Multi-tier Random policy
+│   ├── run_random_experiment.py           # Random runner
+│   └── results/                           # Results & publication figures
+├── main.py                                # Master comparative benchmark runner (all 7 policies)
+├── results/                               # Consolidated results and figures
+│   ├── consolidated_results.json          # Metrics across all 7 policies
+│   ├── summary_table.txt                  # Tabular summary
+│   └── figures/                           # Comparative publication-quality plots
 └── README.md
 ```
 
-## How to Run
+---
 
-### 1. Install Dependencies
+## Evaluation Benchmark Protocol
 
-```bash
-pip install numpy matplotlib pandas simpy
-```
+- **Dataset**: `Dataset/memcached-sample` (20,000 trace requests)
+- **Train/Test Partition**:
+  - **Train**: First 5,000 requests (strictly used for optimization/hyperparameter search)
+  - **Test**: Remaining 15,000 requests (held-out unseen requests for zero-leakage evaluation)
+- **Hierarchy Configuration**:
+  - Total Cache: 10% of total catalog size
+  - DRAM Tier: 20% of total cache (100 ns latency, 40 GB/s bandwidth)
+  - SSD Tier: 80% of total cache (10 µs latency, 2 GB/s bandwidth)
 
-### 2. Generate Synthetic Trace (run once)
+---
 
-```bash
-python generate_trace.py
-```
+## Running the Benchmark
 
-This creates a synthetic NDN traffic trace with:
-- 100 unique content items, Zipf(α=0.8) popularity
-- Poisson arrivals (λ=5 req/s), 15-minute traffic period (~4500 requests)
-- 30% high-priority, 70% low-priority content
-
-### 3. Run All Simulations
+To evaluate all 7 policies and generate comparison figures:
 
 ```bash
-python main.py
+python3 main.py
 ```
 
-Runs all 7 policies and generates comparison plots in `results/figures/`.
+To run individual implementations separately:
 
-## Key Results
+```bash
+python3 -m dsoa_implementation.run_dsoa_experiment
+python3 -m sfo_implementation.run_sfo_experiment
+python3 -m pso_implementation.run_pso_experiment
+python3 -m genetic_algorithm_implementation.run_ga_experiment
+python3 -m lru_implementation.run_lru_experiment
+python3 -m lfu_implementation.run_lfu_experiment
+python3 -m random_implementation.run_random_experiment
+```
 
-| Policy | Total CHR | HPC CHR | LPC CHR | Penalty HPC | Penalty LPC |
-|--------|-----------|---------|---------|-------------|-------------|
-| M_ARC | 0.2595 | 0.4222 | 0.1559 | 63110 | 29155 |
-| **QM_ARC** | **0.2666** | **0.5175** | 0.1067 | **53695** | 30875 |
-| QL_QM_ARC | 0.1812 | 0.3512 | 0.0729 | 72315 | 32255 |
-| LRU | 0.2133 | 0.3320 | 0.1376 | 72650 | 29845 |
-| LFU | 0.2133 | 0.3320 | 0.1376 | 72650 | 29845 |
-| Random | 0.2029 | 0.3134 | 0.1325 | 74760 | 30105 |
-| PriorityLRU | 0.2222 | 0.3749 | 0.1250 | 67295 | 30295 |
+---
 
-### Key Observations
+## Summary of Results (15,000 Unseen Test Requests)
 
-- **QM_ARC achieves the best high-priority CHR** (0.5175) — 55% better than LRU baseline
-- **M_ARC outperforms all baselines** in total CHR (0.2595 vs 0.2133 for LRU)
-- **QM_ARC has the lowest penalty cost** for high-priority content (53,695)
-- **PriorityLRU** shows moderate improvement via priority-aware prefetching
-
-## Datasets
-
-Synthetic trace generated using Zipf-distributed popularity with Poisson arrivals, stored in:
-`MultiTierCacheSimulator-main/MultiTierCacheSimulator-main/resources/dataset_synthetic/`
-
-## Paper Reference
-
-Multi-tier content store management using Q-Learning enhanced QoS-aware ARC for NDN.
+| Policy | Total CHR | HPC CHR | LPC CHR | Total SLA Penalty | Latency (ms) |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **DSOA-Predictive** | **41.41%** | **45.64%** | **39.49%** | **205,790** | **61.511** |
+| **SFO-Predictive** | 41.41% | 45.47% | 39.58% | 206,350 | 61.430 |
+| **GA-Predictive** | 40.63% | 46.04% | 38.17% | 206,320 | 62.216 |
+| **PSO-Predictive** | 38.04% | 47.22% | 33.88% | 207,565 | 64.601 |
+| **LRU** | 37.95% | 38.92% | 37.50% | 226,145 | 65.119 |
+| **Random** | 35.18% | 35.86% | 34.87% | 238,720 | 68.007 |
+| **LFU** | 33.08% | 34.43% | 32.47% | 238,735 | 67.637 |
