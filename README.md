@@ -65,6 +65,10 @@ python3 -m lfu_implementation.run_lfu_experiment
 python3 -m random_implementation.run_random_experiment
 ```
 
+The 10k PSO hyperparameter sweep configurations, validation results, modeled
+cache/storage parameters, and physical-host metadata availability are documented in
+[the PSO sweep notes](pso_implementation/results/hyperparameter_sweep_10k/EXPERIMENT_NOTES.md).
+
 ---
 
 ## Comparative Performance Summary (15,000 Unseen Test Requests)
