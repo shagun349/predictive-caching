@@ -1,0 +1,12 @@
+{
+  "w_recency": 1.0,
+  "w_frequency": 0.657059619554112,
+  "w_freq_decay": 0.45602501895594605,
+  "w_size": 0.20395179443244205,
+  "w_priority": 2.9087100312194893,
+  "w_penalty": 2.0,
+  "w_predicted_reuse": -1.0,
+  "theta_dram": 0.0,
+  "alpha_qos": 0.0,
+  "target_p": 0.0
+}
