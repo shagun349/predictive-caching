@@ -1,0 +1,78 @@
+{
+  "completed_configurations": 1,
+  "total_configurations": 10,
+  "configuration_names": [
+    "baseline",
+    "crossover_70",
+    "crossover_95",
+    "mutation_10",
+    "mutation_30",
+    "elite_1",
+    "elite_5",
+    "tournament_2",
+    "tournament_5",
+    "blend_gaussian"
+  ],
+  "training_requests": 10000,
+  "validation_requests": 40000,
+  "holdout_requests": 40000,
+  "training_catalog_bytes": 6135728,
+  "total_cache_size_bytes": 613572,
+  "results": [
+    {
+      "name": "baseline",
+      "parameters": {
+        "name": "baseline",
+        "crossover_rate": 0.85,
+        "mutation_rate": 0.2,
+        "elite_count": 3,
+        "tournament_size": 3,
+        "crossover_method": "sbx",
+        "mutation_method": "gaussian"
+      },
+      "best_training_fitness": 0.4456351646349076,
+      "validation_score": 0.4521222071768902,
+      "training_seconds": 378.7134635448456,
+      "validation_seconds": 2.44663143157959,
+      "validation_metrics": {
+        "total_requests": 40000,
+        "nb_hpc": 12291,
+        "nb_lpc": 27709,
+        "chr_total": 0.6709,
+        "chr_dram": 0.5063,
+        "chr_ssd": 0.1646,
+        "chr_hpc": 0.6940037425758685,
+        "chr_hpc_dram": 0.5518672199170125,
+        "chr_hpc_ssd": 0.14213652265885607,
+        "chr_lpc": 0.6606517737919088,
+        "chr_lpc_dram": 0.486087552780685,
+        "chr_lpc_ssd": 0.1745642210112238,
+        "penalty_hpc": 213810,
+        "penalty_lpc": 101475,
+        "penalty_total": 315285,
+        "avg_hpc_retrieval_time": 0.03228407445319296,
+        "avg_lpc_retrieval_time": 0.03584069871590888,
+        "avg_retrieval_time": 0.034747836995582836,
+        "reads_dram": 20252,
+        "reads_ssd": 6584,
+        "writes_dram": 33397,
+        "writes_ssd": 6584,
+        "used_size_dram": 121987,
+        "used_size_ssd": 489496,
+        "pit_aggregations": 19
+      },
+      "best_chromosome_genes": {
+        "w_recency": 0.4696895388469216,
+        "w_frequency": 0.9855487955176259,
+        "w_freq_decay": 0.05,
+        "w_size": 0.0429682651829593,
+        "w_priority": 0.9724018029448384,
+        "w_penalty": 0.0009577947448015022,
+        "w_predicted_reuse": 0.624005927196712,
+        "theta_dram": 0.5558476661138547,
+        "alpha_qos": 0.10963755132226788,
+        "target_p": 0.5063889868283783
+      }
+    }
+  ]
+}

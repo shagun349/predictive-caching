@@ -206,7 +206,7 @@ class ABCEngine:
             self.history.append(snapshot)
 
             if verbose:
-                flag = "↑" if snapshot["best_fitness"] > (self.history[-2]["best_fitness"] if cycle > 1 else 0) else "="
+                flag = "+" if snapshot["best_fitness"] > (self.history[-2]["best_fitness"] if cycle > 1 else 0) else "="
                 print(f"Cycle [{cycle:2d}/{self.T_max}] {flag} | "
                       f"Best Nectar Fit: {self.best_food_source.fitness:.4f} | "
                       f"Mean Fit: {mean_fit:.4f} | "

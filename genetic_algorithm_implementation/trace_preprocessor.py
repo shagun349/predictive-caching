@@ -1,9 +1,8 @@
 """
-Trace Preprocessor for Memcached Dataset
-========================================
-Reads the raw memcached trace from 'Dataset/memcached-sample' and converts it into
-a structured NDN/multi-tier caching trace with QoS priority tags, realistic timestamps,
-content sizes, and network response times.
+Trace Preprocessor for the 10k Sweep Trace
+=========================================
+Reads the standardized benchmark trace from `Dataset/cluster07(00).csv` and converts
+it into a structured multi-tier caching trace with priority tags and timing metadata.
 
 Format:
   timestamp, key, size, priority ('h'/'l'), response_time, operation
@@ -141,7 +140,7 @@ class TracePreprocessor:
 
 if __name__ == "__main__":
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    dataset_file = os.path.join(base_dir, "Dataset", "memcached-sample")
+    dataset_file = os.path.join(base_dir, "Dataset", "cluster07(00).csv")
     preprocessor = TracePreprocessor(dataset_file)
     records, stats = preprocessor.process()
     print("Trace Preprocessor Test:")

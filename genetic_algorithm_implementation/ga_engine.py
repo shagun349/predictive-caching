@@ -36,7 +36,9 @@ class GeneticAlgorithmEngine:
         w_chr: float = 0.40,
         w_hpc: float = 0.35,
         w_pen: float = 0.15,
-        w_lat: float = 0.10
+        w_lat: float = 0.10,
+        max_penalty_ref: float = 500000.0,
+        max_latency_ref: float = 0.05
     ):
         self.population_size = population_size
         self.generations = generations
@@ -53,6 +55,8 @@ class GeneticAlgorithmEngine:
         self.w_hpc = w_hpc
         self.w_pen = w_pen
         self.w_lat = w_lat
+        self.max_penalty_ref = max_penalty_ref
+        self.max_latency_ref = max_latency_ref
 
         self.population: List[Chromosome] = []
         self.best_chromosome: Optional[Chromosome] = None
@@ -144,7 +148,13 @@ class GeneticAlgorithmEngine:
         # Initial evaluation
         for ind in self.population:
             if not ind.evaluated:
-                self.evaluate_chromosome(ind, simulator, training_trace)
+                self.evaluate_chromosome(
+                    ind,
+                    simulator,
+                    training_trace,
+                    max_penalty_ref=self.max_penalty_ref,
+                    max_latency_ref=self.max_latency_ref,
+                )
 
         self.population.sort(key=lambda c: c.fitness, reverse=True)
         self.best_chromosome = self.population[0].clone()
@@ -187,7 +197,13 @@ class GeneticAlgorithmEngine:
             # Evaluate newly generated individuals
             for ind in self.population:
                 if not ind.evaluated:
-                    self.evaluate_chromosome(ind, simulator, training_trace)
+                    self.evaluate_chromosome(
+                        ind,
+                        simulator,
+                        training_trace,
+                        max_penalty_ref=self.max_penalty_ref,
+                        max_latency_ref=self.max_latency_ref,
+                    )
 
             # Sort by fitness descending
             self.population.sort(key=lambda c: c.fitness, reverse=True)

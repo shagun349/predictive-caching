@@ -260,7 +260,7 @@ class DSOAEngine:
             self.history.append(iter_record)
 
             if verbose:
-                improved = "↑" if self.gbest_fitness > prev_gbest else "="
+                improved = "+" if self.gbest_fitness > prev_gbest else "="
                 print(
                     f"Iteration [{iter_num:2d}/{self.iterations}] {improved} | "
                     f"Best Fit: {self.gbest_fitness:.4f} | "

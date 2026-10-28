@@ -1,0 +1,13 @@
+{
+  "completed_configurations": 7,
+  "total_configurations": 7,
+  "progress": [
+    "baseline",
+    "limit_04",
+    "limit_12",
+    "colony_20",
+    "colony_40",
+    "combined_20_12",
+    "combined_40_12"
+  ]
+}
