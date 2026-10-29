@@ -57,6 +57,8 @@ python -m pso_implementation.run_pso_hyperparameter_sweep
 python -m sfo_implementation.run_sfo_hyperparameter_sweep
 python -m dsoa_implementation.run_dsoa_hyperparameter_sweep
 python -m abc_implementation.run_abc_hyperparameter_sweep
+python -m ho_implementation.run_ho_hyperparameter_sweep
+python -m woa_implementation.run_woa_hyperparameter_sweep
 ```
 
 ## Shared Hyperparameter Sweep Protocol
@@ -74,7 +76,7 @@ configurations are comparable and not contaminated by test leakage:
 - Search budget: 30 agents, 25 iterations/generations, same seed for each algorithm
 - Selection rule: choose the configuration with the best validation score only; evaluate the chosen config once on the holdout block
 
-This is the protocol used by the GA, PSO, SFO, DSOA, and ABC sweeps, and it is the
+This is the protocol used by the GA, PSO, SFO, DSOA, ABC, HO, and WOA sweeps, and it is the
 one we compare against each other.
 
 The 10k PSO hyperparameter sweep configurations, validation results, modeled
@@ -87,7 +89,11 @@ The DSOA sweep follows the same 10k train/validation/holdout protocol and can be
 reproduced with `python -m dsoa_implementation.run_dsoa_hyperparameter_sweep`.
 The ABC sweep follows the same 10k train/validation/holdout protocol and can be
 reproduced with `python -m abc_implementation.run_abc_hyperparameter_sweep`.
-The selected-policy holdout comparison for GA, PSO, SFO, DSOA, and ABC is summarized in
+The HO sweep follows the same 10k train/validation/holdout protocol and can be
+reproduced with `python -m ho_implementation.run_ho_hyperparameter_sweep`.
+The WOA sweep follows the same 10k train/validation/holdout protocol and can be
+reproduced with `python -m woa_implementation.run_woa_hyperparameter_sweep`.
+The selected-policy holdout comparison for GA, PSO, SFO, DSOA, ABC, HO, and WOA is summarized in
 [PSO_SFO_10K_COMPARISON.md](results/PSO_SFO_10K_COMPARISON.md).
 
 ## Why we use validation
@@ -122,5 +128,7 @@ All values below are from the same 40,000-request holdout block (requests 50,001
 | **GA** | 67.38% | 69.96% | 66.24% | 310,920 | 34.61 |
 | **DSOA** | 67.13% | 70.05% | 65.84% | 310,710 | 34.93 |
 | **ABC** | 67.26% | 69.69% | 66.19% | 310,965 | 34.74 |
+| **HO** | 67.62% | 69.61% | 66.75% | 312,470 | 34.41 |
+| **WOA** | 67.41% | 69.76% | 66.38% | 311,530 | 34.52 |
 
 This is the comparison that should be used when discussing algorithm performance under the shared protocol. Older benchmark numbers from different request splits are not directly comparable to this matched 10k/validation/holdout sweep.

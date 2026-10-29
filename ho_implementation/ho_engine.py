@@ -46,7 +46,8 @@ class HOEngine:
         # Precompute Lévy sigma factor
         num = math.gamma(1.0 + self.beta) * math.sin(math.pi * self.beta / 2.0)
         den = math.gamma((1.0 + self.beta) / 2.0) * self.beta * (2.0 ** ((self.beta - 1.0) / 2.0))
-        self.levy_sigma = (num / den) ** (1.0 / self.beta)
+        sigma = abs(num / den) if den != 0 else 1.0
+        self.levy_sigma = max(1e-12, sigma) ** (1.0 / self.beta)
 
         self.population: List[Hippo] = []
         self.dominant_bull: Optional[Hippo] = None
@@ -203,7 +204,7 @@ class HOEngine:
             self.history.append(snapshot)
 
             if verbose:
-                flag = "↑" if snapshot["best_fitness"] > (self.history[-2]["best_fitness"] if it > 1 else 0) else "="
+                flag = "up" if snapshot["best_fitness"] > (self.history[-2]["best_fitness"] if it > 1 else 0) else "="
                 print(f"Iteration [{it:2d}/{self.T_max}] {flag} | "
                       f"Dominant Fit: {self.dominant_bull.fitness:.4f} | "
                       f"Avg Fit: {mean_fit:.4f} | "

@@ -203,7 +203,7 @@ class WOAEngine:
             self.history.append(snapshot)
 
             if verbose:
-                flag = "↑" if snapshot["best_fitness"] > (self.history[-2]["best_fitness"] if t > 1 else 0) else "="
+                flag = "up" if snapshot["best_fitness"] > (self.history[-2]["best_fitness"] if t > 1 else 0) else "="
                 print(f"Iter [{t:2d}/{self.T_max}] {flag} | "
                       f"Best Fit: {self.best_whale.fitness:.4f} | "
                       f"Mean Fit: {mean_fit:.4f} | "
