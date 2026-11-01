@@ -19,3 +19,6 @@ The output is a runtime-vs-quality summary that answers if the extra optimizatio
 
 ## Paper framing
 This section enables a practical argument: an optimizer that is slightly better but much slower may not be preferable in deployment.
+
+## Experiment notes
+See the benchmark notes in `../../rq4_experiments/EXPERIMENT_NOTES.md` for the workload protocol, metrics, and interpretation.

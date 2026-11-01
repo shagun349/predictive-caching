@@ -19,3 +19,6 @@ This quantifies reproducibility and robustness to stochastic initialization.
 
 ## Paper framing
 A method that wins only on one lucky seed is less convincing than one that is consistently competitive across repeated runs.
+
+## Experiment notes
+See the benchmark notes in `../../rq5_experiments/EXPERIMENT_NOTES.md` for the workload protocol, metrics, and interpretation.
