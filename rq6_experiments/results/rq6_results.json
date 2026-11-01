@@ -1,0 +1,422 @@
+[
+  {
+    "source_workload": "static_zipf",
+    "target_workload": "bursty_trending",
+    "algorithm": "GA",
+    "transfer_score": 0.29283897041762913,
+    "same_domain_score": 0.25446324530848774,
+    "gap": -0.03837572510914139,
+    "transfer_chr_total": 0.495,
+    "transfer_penalty": 4570
+  },
+  {
+    "source_workload": "static_zipf",
+    "target_workload": "bursty_trending",
+    "algorithm": "PSO",
+    "transfer_score": 0.2802138277186004,
+    "same_domain_score": 0.31084680664377684,
+    "gap": 0.03063297892517647,
+    "transfer_chr_total": 0.4625,
+    "transfer_penalty": 4550
+  },
+  {
+    "source_workload": "static_zipf",
+    "target_workload": "bursty_trending",
+    "algorithm": "SFO",
+    "transfer_score": 0.2883042139778946,
+    "same_domain_score": 0.28458556780019745,
+    "gap": -0.003718646177697127,
+    "transfer_chr_total": 0.4725,
+    "transfer_penalty": 4480
+  },
+  {
+    "source_workload": "static_zipf",
+    "target_workload": "bursty_trending",
+    "algorithm": "DSOA",
+    "transfer_score": 0.31147174449108334,
+    "same_domain_score": 0.31184681800964,
+    "gap": 0.0003750735185566456,
+    "transfer_chr_total": 0.4775,
+    "transfer_penalty": 4240
+  },
+  {
+    "source_workload": "static_zipf",
+    "target_workload": "bursty_trending",
+    "algorithm": "ABC",
+    "transfer_score": 0.28783546390839937,
+    "same_domain_score": 0.260143852763463,
+    "gap": -0.027691611144936346,
+    "transfer_chr_total": 0.4725,
+    "transfer_penalty": 4505
+  },
+  {
+    "source_workload": "static_zipf",
+    "target_workload": "bursty_trending",
+    "algorithm": "HO",
+    "transfer_score": 0.27921381673662743,
+    "same_domain_score": 0.25677232089975793,
+    "gap": -0.022441495836869496,
+    "transfer_chr_total": 0.46,
+    "transfer_penalty": 4550
+  },
+  {
+    "source_workload": "static_zipf",
+    "target_workload": "bursty_trending",
+    "algorithm": "WOA",
+    "transfer_score": 0.2845854200346659,
+    "same_domain_score": 0.31462468329782506,
+    "gap": 0.030039263263159144,
+    "transfer_chr_total": 0.4625,
+    "transfer_penalty": 4465
+  },
+  {
+    "source_workload": "static_zipf",
+    "target_workload": "drift",
+    "algorithm": "GA",
+    "transfer_score": 0.5817743330263866,
+    "same_domain_score": 0.6546941421437419,
+    "gap": 0.0729198091173553,
+    "transfer_chr_total": 0.793,
+    "transfer_penalty": 4270
+  },
+  {
+    "source_workload": "static_zipf",
+    "target_workload": "drift",
+    "algorithm": "PSO",
+    "transfer_score": 0.5846385426589753,
+    "same_domain_score": 0.6518199014833095,
+    "gap": 0.06718135882433418,
+    "transfer_chr_total": 0.802,
+    "transfer_penalty": 4210
+  },
+  {
+    "source_workload": "static_zipf",
+    "target_workload": "drift",
+    "algorithm": "SFO",
+    "transfer_score": 0.5832983234383001,
+    "same_domain_score": 0.6449239902651044,
+    "gap": 0.06162566682680426,
+    "transfer_chr_total": 0.793,
+    "transfer_penalty": 4225
+  },
+  {
+    "source_workload": "static_zipf",
+    "target_workload": "drift",
+    "algorithm": "DSOA",
+    "transfer_score": 0.5793753641686681,
+    "same_domain_score": 0.6542565761452446,
+    "gap": 0.07488121197657649,
+    "transfer_chr_total": 0.791,
+    "transfer_penalty": 4325
+  },
+  {
+    "source_workload": "static_zipf",
+    "target_workload": "drift",
+    "algorithm": "ABC",
+    "transfer_score": 0.5817743330195029,
+    "same_domain_score": 0.6441113159271212,
+    "gap": 0.062336982907618355,
+    "transfer_chr_total": 0.793,
+    "transfer_penalty": 4270
+  },
+  {
+    "source_workload": "static_zipf",
+    "target_workload": "drift",
+    "algorithm": "HO",
+    "transfer_score": 0.5831483557074014,
+    "same_domain_score": 0.6544564463161325,
+    "gap": 0.07130809060873111,
+    "transfer_chr_total": 0.793,
+    "transfer_penalty": 4245
+  },
+  {
+    "source_workload": "static_zipf",
+    "target_workload": "drift",
+    "algorithm": "WOA",
+    "transfer_score": 0.5849489137096675,
+    "same_domain_score": 0.651932401354595,
+    "gap": 0.06698348764492745,
+    "transfer_chr_total": 0.796,
+    "transfer_penalty": 4165
+  },
+  {
+    "source_workload": "bursty_trending",
+    "target_workload": "static_zipf",
+    "algorithm": "GA",
+    "transfer_score": 0.37456170761351165,
+    "same_domain_score": 0.39240602748530923,
+    "gap": 0.017844319871797576,
+    "transfer_chr_total": 0.5575,
+    "transfer_penalty": 4095
+  },
+  {
+    "source_workload": "bursty_trending",
+    "target_workload": "static_zipf",
+    "algorithm": "PSO",
+    "transfer_score": 0.3967322866222647,
+    "same_domain_score": 0.39240602746872766,
+    "gap": -0.004326259153537015,
+    "transfer_chr_total": 0.5525,
+    "transfer_penalty": 3865
+  },
+  {
+    "source_workload": "bursty_trending",
+    "target_workload": "static_zipf",
+    "algorithm": "SFO",
+    "transfer_score": 0.3776642546431465,
+    "same_domain_score": 0.39368740355288895,
+    "gap": 0.016023148909742435,
+    "transfer_chr_total": 0.545,
+    "transfer_penalty": 4060
+  },
+  {
+    "source_workload": "bursty_trending",
+    "target_workload": "static_zipf",
+    "algorithm": "DSOA",
+    "transfer_score": 0.39378115355380566,
+    "same_domain_score": 0.3913122035867597,
+    "gap": -0.0024689499670459414,
+    "transfer_chr_total": 0.5525,
+    "transfer_penalty": 3890
+  },
+  {
+    "source_workload": "bursty_trending",
+    "target_workload": "static_zipf",
+    "algorithm": "ABC",
+    "transfer_score": 0.37057455670803136,
+    "same_domain_score": 0.39249977748640646,
+    "gap": 0.02192522077837511,
+    "transfer_chr_total": 0.5425,
+    "transfer_penalty": 4120
+  },
+  {
+    "source_workload": "bursty_trending",
+    "target_workload": "static_zipf",
+    "algorithm": "HO",
+    "transfer_score": 0.3868478786403066,
+    "same_domain_score": 0.38865556923362754,
+    "gap": 0.0018076905933209209,
+    "transfer_chr_total": 0.5525,
+    "transfer_penalty": 3995
+  },
+  {
+    "source_workload": "bursty_trending",
+    "target_workload": "static_zipf",
+    "algorithm": "WOA",
+    "transfer_score": 0.3959822865128281,
+    "same_domain_score": 0.39506256280439217,
+    "gap": -0.0009197237084359045,
+    "transfer_chr_total": 0.5525,
+    "transfer_penalty": 3905
+  },
+  {
+    "source_workload": "bursty_trending",
+    "target_workload": "drift",
+    "algorithm": "GA",
+    "transfer_score": 0.5858240976246107,
+    "same_domain_score": 0.6546941421437419,
+    "gap": 0.06887004451913115,
+    "transfer_chr_total": 0.798,
+    "transfer_penalty": 4155
+  },
+  {
+    "source_workload": "bursty_trending",
+    "target_workload": "drift",
+    "algorithm": "PSO",
+    "transfer_score": 0.579710830854737,
+    "same_domain_score": 0.6518199014833095,
+    "gap": 0.07210907062857252,
+    "transfer_chr_total": 0.786,
+    "transfer_penalty": 4330
+  },
+  {
+    "source_workload": "bursty_trending",
+    "target_workload": "drift",
+    "algorithm": "SFO",
+    "transfer_score": 0.5797983215337817,
+    "same_domain_score": 0.6449239902651044,
+    "gap": 0.06512566873132264,
+    "transfer_chr_total": 0.785,
+    "transfer_penalty": 4265
+  },
+  {
+    "source_workload": "bursty_trending",
+    "target_workload": "drift",
+    "algorithm": "DSOA",
+    "transfer_score": 0.5796857087209871,
+    "same_domain_score": 0.6542565761452446,
+    "gap": 0.07457086742425745,
+    "transfer_chr_total": 0.785,
+    "transfer_penalty": 4280
+  },
+  {
+    "source_workload": "bursty_trending",
+    "target_workload": "drift",
+    "algorithm": "ABC",
+    "transfer_score": 0.566325248107684,
+    "same_domain_score": 0.6441113159271212,
+    "gap": 0.0777860678194372,
+    "transfer_chr_total": 0.761,
+    "transfer_penalty": 4465
+  },
+  {
+    "source_workload": "bursty_trending",
+    "target_workload": "drift",
+    "algorithm": "HO",
+    "transfer_score": 0.5821369507916581,
+    "same_domain_score": 0.6544564463161325,
+    "gap": 0.07231949552447448,
+    "transfer_chr_total": 0.794,
+    "transfer_penalty": 4275
+  },
+  {
+    "source_workload": "bursty_trending",
+    "target_workload": "drift",
+    "algorithm": "WOA",
+    "transfer_score": 0.5632722540312445,
+    "same_domain_score": 0.651932401354595,
+    "gap": 0.08866014732335048,
+    "transfer_chr_total": 0.748,
+    "transfer_penalty": 4495
+  },
+  {
+    "source_workload": "drift",
+    "target_workload": "static_zipf",
+    "algorithm": "GA",
+    "transfer_score": 0.4466014891008634,
+    "same_domain_score": 0.39240602748530923,
+    "gap": -0.054195461615554164,
+    "transfer_chr_total": 0.6275,
+    "transfer_penalty": 3335
+  },
+  {
+    "source_workload": "drift",
+    "target_workload": "static_zipf",
+    "algorithm": "PSO",
+    "transfer_score": 0.44660148931868837,
+    "same_domain_score": 0.39240602746872766,
+    "gap": -0.05419546184996071,
+    "transfer_chr_total": 0.6275,
+    "transfer_penalty": 3335
+  },
+  {
+    "source_workload": "drift",
+    "target_workload": "static_zipf",
+    "algorithm": "SFO",
+    "transfer_score": 0.45253955871355017,
+    "same_domain_score": 0.39368740355288895,
+    "gap": -0.058852155160661224,
+    "transfer_chr_total": 0.64,
+    "transfer_penalty": 3285
+  },
+  {
+    "source_workload": "drift",
+    "target_workload": "static_zipf",
+    "algorithm": "DSOA",
+    "transfer_score": 0.45083350722288784,
+    "same_domain_score": 0.3913122035867597,
+    "gap": -0.05952130363612812,
+    "transfer_chr_total": 0.63,
+    "transfer_penalty": 3295
+  },
+  {
+    "source_workload": "drift",
+    "target_workload": "static_zipf",
+    "algorithm": "ABC",
+    "transfer_score": 0.4467889893883759,
+    "same_domain_score": 0.39249977748640646,
+    "gap": -0.05428921190196945,
+    "transfer_chr_total": 0.6275,
+    "transfer_penalty": 3325
+  },
+  {
+    "source_workload": "drift",
+    "target_workload": "static_zipf",
+    "algorithm": "HO",
+    "transfer_score": 0.4307386379031241,
+    "same_domain_score": 0.38865556923362754,
+    "gap": -0.04208306866949657,
+    "transfer_chr_total": 0.5875,
+    "transfer_penalty": 3460
+  },
+  {
+    "source_workload": "drift",
+    "target_workload": "static_zipf",
+    "algorithm": "WOA",
+    "transfer_score": 0.4509275549364894,
+    "same_domain_score": 0.39506256280439217,
+    "gap": -0.055864992132097224,
+    "transfer_chr_total": 0.63,
+    "transfer_penalty": 3290
+  },
+  {
+    "source_workload": "drift",
+    "target_workload": "bursty_trending",
+    "algorithm": "GA",
+    "transfer_score": 0.3864266230782195,
+    "same_domain_score": 0.25446324530848774,
+    "gap": -0.13196337776973177,
+    "transfer_chr_total": 0.6025,
+    "transfer_penalty": 3650
+  },
+  {
+    "source_workload": "drift",
+    "target_workload": "bursty_trending",
+    "algorithm": "PSO",
+    "transfer_score": 0.374936736269655,
+    "same_domain_score": 0.31084680664377684,
+    "gap": -0.06408992962587817,
+    "transfer_chr_total": 0.6,
+    "transfer_penalty": 3765
+  },
+  {
+    "source_workload": "drift",
+    "target_workload": "bursty_trending",
+    "algorithm": "SFO",
+    "transfer_score": 0.3748429902502406,
+    "same_domain_score": 0.28458556780019745,
+    "gap": -0.09025742245004315,
+    "transfer_chr_total": 0.6,
+    "transfer_penalty": 3770
+  },
+  {
+    "source_workload": "drift",
+    "target_workload": "bursty_trending",
+    "algorithm": "DSOA",
+    "transfer_score": 0.38482912847765277,
+    "same_domain_score": 0.31184681800964,
+    "gap": -0.07298231046801279,
+    "transfer_chr_total": 0.5925,
+    "transfer_penalty": 3670
+  },
+  {
+    "source_workload": "drift",
+    "target_workload": "bursty_trending",
+    "algorithm": "ABC",
+    "transfer_score": 0.3738779935457708,
+    "same_domain_score": 0.260143852763463,
+    "gap": -0.11373414078230776,
+    "transfer_chr_total": 0.605,
+    "transfer_penalty": 3780
+  },
+  {
+    "source_workload": "drift",
+    "target_workload": "bursty_trending",
+    "algorithm": "HO",
+    "transfer_score": 0.34379543756168324,
+    "same_domain_score": 0.25677232089975793,
+    "gap": -0.0870231166619253,
+    "transfer_chr_total": 0.5,
+    "transfer_penalty": 3885
+  },
+  {
+    "source_workload": "drift",
+    "target_workload": "bursty_trending",
+    "algorithm": "WOA",
+    "transfer_score": 0.3878954087910211,
+    "same_domain_score": 0.31462468329782506,
+    "gap": -0.07327072549319602,
+    "transfer_chr_total": 0.605,
+    "transfer_penalty": 3625
+  }
+]

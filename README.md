@@ -59,6 +59,8 @@ python -m dsoa_implementation.run_dsoa_hyperparameter_sweep
 python -m abc_implementation.run_abc_hyperparameter_sweep
 python -m ho_implementation.run_ho_hyperparameter_sweep
 python -m woa_implementation.run_woa_hyperparameter_sweep
+python -m rq6_experiments.run_rq6_benchmark
+python -m rq7_experiments.run_rq7_benchmark
 ```
 
 ## Shared Hyperparameter Sweep Protocol

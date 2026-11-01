@@ -1,0 +1,302 @@
+[
+  {
+    "workload": "static_zipf_alpha_12",
+    "workload_family": "static_zipf",
+    "algorithm": "GA",
+    "score": 0.4025580353478532,
+    "chr_total": 0.595,
+    "penalty_total": 5295,
+    "avg_retrieval_time": 0.0355431320662499,
+    "type": "metaheuristic"
+  },
+  {
+    "workload": "static_zipf_alpha_12",
+    "workload_family": "static_zipf",
+    "algorithm": "PSO",
+    "score": 0.3444871096642342,
+    "chr_total": 0.5933333333333334,
+    "penalty_total": 6195,
+    "avg_retrieval_time": 0.03616242672570825,
+    "type": "metaheuristic"
+  },
+  {
+    "workload": "static_zipf_alpha_12",
+    "workload_family": "static_zipf",
+    "algorithm": "SFO",
+    "score": 0.3417368030180887,
+    "chr_total": 0.5883333333333334,
+    "penalty_total": 6255,
+    "avg_retrieval_time": 0.03662239594391658,
+    "type": "metaheuristic"
+  },
+  {
+    "workload": "static_zipf_alpha_12",
+    "workload_family": "static_zipf",
+    "algorithm": "DSOA",
+    "score": 0.32478985073220407,
+    "chr_total": 0.5416666666666666,
+    "penalty_total": 6425,
+    "avg_retrieval_time": 0.03878159400162489,
+    "type": "metaheuristic"
+  },
+  {
+    "workload": "static_zipf_alpha_12",
+    "workload_family": "static_zipf",
+    "algorithm": "ABC",
+    "score": 0.39129858561915803,
+    "chr_total": 0.5633333333333334,
+    "penalty_total": 5490,
+    "avg_retrieval_time": 0.037698494339874884,
+    "type": "metaheuristic"
+  },
+  {
+    "workload": "static_zipf_alpha_12",
+    "workload_family": "static_zipf",
+    "algorithm": "HO",
+    "score": 0.3427640602782889,
+    "chr_total": 0.585,
+    "penalty_total": 6220,
+    "avg_retrieval_time": 0.03660189025899991,
+    "type": "metaheuristic"
+  },
+  {
+    "workload": "static_zipf_alpha_12",
+    "workload_family": "static_zipf",
+    "algorithm": "WOA",
+    "score": 0.3474226872559731,
+    "chr_total": 0.585,
+    "penalty_total": 6155,
+    "avg_retrieval_time": 0.03664219296345825,
+    "type": "metaheuristic"
+  },
+  {
+    "workload": "static_zipf_alpha_12",
+    "workload_family": "static_zipf",
+    "algorithm": "LRU",
+    "score": 0.02553976405973382,
+    "chr_total": 0.37333333333333335,
+    "penalty_total": 10670,
+    "avg_retrieval_time": 0.050930833476208213,
+    "type": "baseline"
+  },
+  {
+    "workload": "static_zipf_alpha_12",
+    "workload_family": "static_zipf",
+    "algorithm": "LFU",
+    "score": 0.16123165860483704,
+    "chr_total": 0.4683333333333333,
+    "penalty_total": 8855,
+    "avg_retrieval_time": 0.04433901582137486,
+    "type": "baseline"
+  },
+  {
+    "workload": "static_zipf_alpha_12",
+    "workload_family": "static_zipf",
+    "algorithm": "Random",
+    "score": -0.06579004904146164,
+    "chr_total": 0.11,
+    "penalty_total": 10780,
+    "avg_retrieval_time": 0.06007356219250013,
+    "type": "baseline"
+  },
+  {
+    "workload": "bursty_5x",
+    "workload_family": "bursty_trending",
+    "algorithm": "GA",
+    "score": 0.38636215783984584,
+    "chr_total": 0.6183333333333333,
+    "penalty_total": 5550,
+    "avg_retrieval_time": 0.03471267843345846,
+    "type": "metaheuristic"
+  },
+  {
+    "workload": "bursty_5x",
+    "workload_family": "bursty_trending",
+    "algorithm": "PSO",
+    "score": 0.3912660705174912,
+    "chr_total": 0.6233333333333333,
+    "penalty_total": 5475,
+    "avg_retrieval_time": 0.034531864212666796,
+    "type": "metaheuristic"
+  },
+  {
+    "workload": "bursty_5x",
+    "workload_family": "bursty_trending",
+    "algorithm": "SFO",
+    "score": 0.3907761593140593,
+    "chr_total": 0.6016666666666667,
+    "penalty_total": 5450,
+    "avg_retrieval_time": 0.03590147834929178,
+    "type": "metaheuristic"
+  },
+  {
+    "workload": "bursty_5x",
+    "workload_family": "bursty_trending",
+    "algorithm": "DSOA",
+    "score": 0.3851996724353738,
+    "chr_total": 0.585,
+    "penalty_total": 5520,
+    "avg_retrieval_time": 0.037569998624625116,
+    "type": "metaheuristic"
+  },
+  {
+    "workload": "bursty_5x",
+    "workload_family": "bursty_trending",
+    "algorithm": "ABC",
+    "score": 0.39875075168714375,
+    "chr_total": 0.6083333333333333,
+    "penalty_total": 5340,
+    "avg_retrieval_time": 0.03538932321695844,
+    "type": "metaheuristic"
+  },
+  {
+    "workload": "bursty_5x",
+    "workload_family": "bursty_trending",
+    "algorithm": "HO",
+    "score": 0.3800725769276625,
+    "chr_total": 0.625,
+    "penalty_total": 5480,
+    "avg_retrieval_time": 0.03439303547262513,
+    "type": "metaheuristic"
+  },
+  {
+    "workload": "bursty_5x",
+    "workload_family": "bursty_trending",
+    "algorithm": "WOA",
+    "score": 0.39199429336690356,
+    "chr_total": 0.5833333333333334,
+    "penalty_total": 5395,
+    "avg_retrieval_time": 0.03770320807170845,
+    "type": "metaheuristic"
+  },
+  {
+    "workload": "bursty_5x",
+    "workload_family": "bursty_trending",
+    "algorithm": "LRU",
+    "score": 0.177688420650563,
+    "chr_total": 0.455,
+    "penalty_total": 8365,
+    "avg_retrieval_time": 0.04496733876225013,
+    "type": "baseline"
+  },
+  {
+    "workload": "bursty_5x",
+    "workload_family": "bursty_trending",
+    "algorithm": "LFU",
+    "score": 0.2878177213559356,
+    "chr_total": 0.5366666666666666,
+    "penalty_total": 6730,
+    "avg_retrieval_time": 0.04097414587187512,
+    "type": "baseline"
+  },
+  {
+    "workload": "bursty_5x",
+    "workload_family": "bursty_trending",
+    "algorithm": "Random",
+    "score": -0.03875988640316372,
+    "chr_total": 0.11333333333333333,
+    "penalty_total": 10185,
+    "avg_retrieval_time": 0.058720054183791816,
+    "type": "baseline"
+  },
+  {
+    "workload": "drift_08_to_16",
+    "workload_family": "drift",
+    "algorithm": "GA",
+    "score": 0.6608184964456918,
+    "chr_total": 0.90625,
+    "penalty_total": 3480,
+    "avg_retrieval_time": 0.009463880685046838,
+    "type": "metaheuristic"
+  },
+  {
+    "workload": "drift_08_to_16",
+    "workload_family": "drift",
+    "algorithm": "PSO",
+    "score": 0.6629669459237161,
+    "chr_total": 0.913125,
+    "penalty_total": 3415,
+    "avg_retrieval_time": 0.008717286705671847,
+    "type": "metaheuristic"
+  },
+  {
+    "workload": "drift_08_to_16",
+    "workload_family": "drift",
+    "algorithm": "SFO",
+    "score": 0.6616227196387485,
+    "chr_total": 0.9125,
+    "penalty_total": 3455,
+    "avg_retrieval_time": 0.008703087214109347,
+    "type": "metaheuristic"
+  },
+  {
+    "workload": "drift_08_to_16",
+    "workload_family": "drift",
+    "algorithm": "DSOA",
+    "score": 0.6636311943713221,
+    "chr_total": 0.914375,
+    "penalty_total": 3380,
+    "avg_retrieval_time": 0.008438365296546848,
+    "type": "metaheuristic"
+  },
+  {
+    "workload": "drift_08_to_16",
+    "workload_family": "drift",
+    "algorithm": "ABC",
+    "score": 0.6622563001139826,
+    "chr_total": 0.909375,
+    "penalty_total": 3440,
+    "avg_retrieval_time": 0.009008378248859344,
+    "type": "metaheuristic"
+  },
+  {
+    "workload": "drift_08_to_16",
+    "workload_family": "drift",
+    "algorithm": "HO",
+    "score": 0.6585842915340067,
+    "chr_total": 0.90125,
+    "penalty_total": 3530,
+    "avg_retrieval_time": 0.009208748212765594,
+    "type": "metaheuristic"
+  },
+  {
+    "workload": "drift_08_to_16",
+    "workload_family": "drift",
+    "algorithm": "WOA",
+    "score": 0.6611315690727235,
+    "chr_total": 0.905625,
+    "penalty_total": 3360,
+    "avg_retrieval_time": 0.008604940137484349,
+    "type": "metaheuristic"
+  },
+  {
+    "workload": "drift_08_to_16",
+    "workload_family": "drift",
+    "algorithm": "LRU",
+    "score": 0.6345826494558863,
+    "chr_total": 0.896875,
+    "penalty_total": 4795,
+    "avg_retrieval_time": 0.010275330419406217,
+    "type": "baseline"
+  },
+  {
+    "workload": "drift_08_to_16",
+    "workload_family": "drift",
+    "algorithm": "LFU",
+    "score": 0.6500950237190372,
+    "chr_total": 0.905625,
+    "penalty_total": 3780,
+    "avg_retrieval_time": 0.009261701237062476,
+    "type": "baseline"
+  },
+  {
+    "workload": "drift_08_to_16",
+    "workload_family": "drift",
+    "algorithm": "Random",
+    "score": 0.5512177367540051,
+    "chr_total": 0.7525,
+    "penalty_total": 8130,
+    "avg_retrieval_time": 0.022285736867984424,
+    "type": "baseline"
+  }
+]
